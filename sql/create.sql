@@ -1,5 +1,4 @@
 -- auto-generated definition
--- auto-generated definition
 create table user
 (
     id            int auto_increment comment '用户id'
@@ -17,6 +16,7 @@ create table user
 )
     comment '用户表';
 
+-- auto-generated definition
 create table medicine
 (
     id                     int auto_increment comment '药品id'
@@ -29,3 +29,24 @@ create table medicine
     medicine_inventory     varchar(256) null comment '药品库存量'
 )
     comment '药品表';
+
+
+-- auto-generated definition
+create table orders
+(
+    id                     int auto_increment comment '订单id'
+        primary key,
+    order_number           int          null comment '订单编号',
+    user_id                int          null comment '订单用户id',
+    user_account           varchar(256) null comment '订单用户账号',
+    user_name              varchar(256) null comment '订单用户名称',
+    medicine_id            int          null comment '药品id',
+    medicine_name          varchar(256) null comment '药品名称',
+    shopping_number        int          null comment '购买药品数量',
+    user_gender            int          null comment '用户性别',
+    user_age               int          null comment '用户年龄',
+    user_phone             varchar(256) null comment '用户手机号',
+    medicine_specification varchar(256) null comment '药品规格',
+    medicine_manufacturer  varchar(256) null comment '药品生产厂家'
+)
+    comment '销售表';
