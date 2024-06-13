@@ -1,6 +1,5 @@
-package com.example.demos.exception;
-
-import com.example.demos.Error.ErrorCode;
+package com.example.demos.exception;;
+import com.example.demos.error.ErrorCode;
 
 /**
  * 自定义异常类
@@ -20,7 +19,7 @@ public class BaseExceptionHandler extends RuntimeException {
         this.code= errorCode.getCode();
         this.description= errorCode.getDescription();
     }
-    public BaseExceptionHandler(ErrorCode errorCode,String description){
+    public BaseExceptionHandler(ErrorCode errorCode, String description){
         super(errorCode.getMessage());
         this.code=errorCode.getCode();
         this.description= description;

@@ -1,4 +1,4 @@
-package com.example.demos.Error;
+package com.example.demos.error;
 
 /**
  * 封装通用返回对象工具类

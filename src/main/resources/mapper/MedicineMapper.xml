@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demos.mapper.MedicineMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.demos.pojo.Medicine">
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="medicineName" column="medicine_name" jdbcType="VARCHAR"/>
+        <result property="medicineDescription" column="medicine_description" jdbcType="VARCHAR"/>
+        <result property="medicinePrice" column="medicine_price" jdbcType="INTEGER"/>
+        <result property="medicineSpecification" column="medicine_specification" jdbcType="VARCHAR"/>
+        <result property="medicineManufacturer" column="medicine_manufacturer" jdbcType="VARCHAR"/>
+        <result property="medicineInventory" column="medicine_inventory" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id
+        ,medicine_name,medicine_description,medicine_inventory,
+        medicine_price,medicine_specification,medicine_manufacturer
+    </sql>
+</mapper>

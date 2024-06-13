@@ -1,10 +1,10 @@
 package com.example.demos.exception;
 
-import com.example.demos.Error.BaseResponse;
-import com.example.demos.Error.ErrorCode;
-import com.example.demos.Error.ResultUtils;
+
+import com.example.demos.error.BaseResponse;
+import com.example.demos.error.ErrorCode;
+import com.example.demos.error.ResultUtils;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
