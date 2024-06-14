@@ -13,7 +13,7 @@ import com.example.demos.service.MedicineService;
 import com.example.demos.service.OrdersService;
 import com.example.demos.mapper.OrdersMapper;
 import com.example.demos.service.UserService;
-import com.example.demos.utils.SnowflakeIdWorker;
+import com.example.demos.utils.SnowFlakeGenerateIDUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
@@ -85,8 +85,8 @@ public class OrdersServiceImpl extends ServiceImpl<OrdersMapper, Orders>
             throw new BaseExceptionHandler(ErrorCode.PARAMS_ERROR, "药品不存在");
         }
         //使用雪花算法自动生成订单编号
-        SnowflakeIdWorker snowflakeIdWorker = new SnowflakeIdWorker(0, 0);
-        int orderNumber = (int) snowflakeIdWorker.nextId();
+        SnowFlakeGenerateIDUtils snowFlakeGenerateIDUtils = new SnowFlakeGenerateIDUtils(1,1,1);
+        int orderNumber = (int) snowFlakeGenerateIDUtils.nextId();
         Orders order = new Orders();
         order.setOrderNumber(orderNumber);
         order.setUserId(user.getId());
